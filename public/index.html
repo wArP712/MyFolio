@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MyFolio | Student Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LOGIN AND REGISTRATION -->
+
+    <div class="auth-screen" id="authScreen">
+
+        <div class="auth-brand">
+            <div class="brand-mark">M</div>
+            <span>myfolio</span>
+        </div>
+
+        <main class="auth-card">
+
+            <p class="eyebrow">YOUR SPACE ON THE WEB</p>
+
+            <h1 id="authTitle">Create your portfolio</h1>
+
+            <p class="muted" id="authSubtitle">
+                Build a simple space to showcase your journey.
+            </p>
+
+            <!-- Registration Form -->
+
+            <form id="registerForm" class="auth-form">
+
+                <label>
+                    Full Name
+                    <input
+                        name="name"
+                        type="text"
+                        placeholder="Your name"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Email Address
+                    <input
+                        name="email"
+                        type="email"
+                        placeholder="you@example.com"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Password
+                    <input
+                        name="password"
+                        type="password"
+                        placeholder="At least 6 characters"
+                        required
+                        minlength="6"
+                    >
+                </label>
+
+                <button class="button primary full" type="submit">
+                    Create Account →
+                </button>
+
+            </form>
+
+            <!-- Login Form -->
+
+            <form id="loginForm" class="auth-form hidden">
+
+                <label>
+                    Email Address
+                    <input
+                        name="email"
+                        type="email"
+                        placeholder="you@example.com"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Password
+                    <input
+                        name="password"
+                        type="password"
+                        placeholder="Your password"
+                        required
+                    >
+                </label>
+
+                <button class="button primary full" type="submit">
+                    Login →
+                </button>
+
+            </form>
+
+            <p class="switch-auth" id="switchText">
+                Already have an account?
+
+                <button
+                    id="showLogin"
+                    class="text-button"
+                    type="button"
+                >
+                    Log in
+                </button>
+            </p>
+
+            <p class="message" id="authMessage"></p>
+
+        </main>
+
+        <p class="auth-foot">
+            A simple portfolio made for students.
+        </p>
+
+    </div>
+
+
+    <!-- MAIN PORTFOLIO DASHBOARD -->
+
+    <div class="app hidden" id="appScreen">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <a class="brand" href="#">
+                <span class="brand-mark">M</span>
+                <span>myfolio</span>
+            </a>
+
+            <div class="side-label">
+                WORKSPACE
+            </div>
+
+            <a class="side-link active" href="#overview">
+                ◫ <span>Overview</span>
+            </a>
+
+            <a class="side-link" href="#projects">
+                ▤ <span>My Projects</span>
+            </a>
+
+            <a class="side-link" href="#profile">
+                ◎ <span>Edit Profile</span>
+            </a>
+
+            <div class="sidebar-bottom">
+
+                <div class="mini-user">
+
+                    <div class="avatar" id="sideAvatar">
+                        S
+                    </div>
+
+                    <div>
+                        <strong id="sideName">Student</strong>
+                        <small>My Portfolio</small>
+                    </div>
+
+                </div>
+
+                <button class="side-link logout" id="logoutButton">
+                    ↪ <span>Log Out</span>
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content">
+
+            <!-- TOP BAR -->
+
+            <header class="topbar">
+
+                <div>
+                    <p class="eyebrow">PERSONAL WORKSPACE</p>
+
+                    <h2 id="welcomeHeading">
+                        Welcome Back
+                    </h2>
+                </div>
+
+                <div class="top-actions">
+
+                    <button
+                        class="icon-button"
+                        id="themeButton"
+                        title="Toggle theme"
+                    >
+                        ◐
+                    </button>
+
+                    <div class="avatar large" id="topAvatar">
+                        S
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- HERO SECTION -->
+
+            <section class="hero" id="overview">
+
+                <div class="hero-copy">
+
+                    <span class="status-pill">
+                        <i></i>
+                        STUDENT PORTFOLIO
+                    </span>
+
+                    <p class="hero-kicker">
+                        HELLO, I'M
+                    </p>
+
+                    <h1 id="heroName">
+                        Your Name<span>.</span>
+                    </h1>
+
+                    <h3 id="heroHeadline">
+                        Student | Aspiring Professional
+                    </h3>
+
+                    <p id="heroAbout">
+                        Your introduction will appear here.
+                        Add a few lines about yourself.
+                    </p>
+
+                    <a class="button light-button" href="#projects">
+                        Explore My Work ↗
+                    </a>
+
+                </div>
+
+                <div class="hero-art">
+
+                    <div class="orbit orbit-one"></div>
+                    <div class="orbit orbit-two"></div>
+
+                    <div class="hero-monogram" id="heroMonogram">
+                        M
+                    </div>
+
+                    <div class="floating-card">
+                        ✦ Learning. Building. Growing.
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PROFILE INFORMATION -->
+
+            <section class="section-block" id="profile">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="eyebrow">A LITTLE ABOUT ME</p>
+                        <h2>My Introduction</h2>
+                    </div>
+
+                    <button
+                        class="button outline"
+                        id="editProfileButton"
+                    >
+                        Edit Profile
+                    </button>
+
+                </div>
+
+
+                <div class="info-grid">
+
+                    <!-- EDUCATION -->
+
+                    <article class="info-card">
+
+                        <div class="card-icon">✳</div>
+
+                        <p class="card-label">
+                            EDUCATION
+                        </p>
+
+                        <h3 id="educationText">
+                            Add your education
+                        </h3>
+
+                        <p class="card-description">
+                            Your academic background
+                        </p>
+
+                    </article>
+
+
+                    <!-- SKILLS -->
+
+                    <article class="info-card">
+
+                        <div class="card-icon">⌘</div>
+
+                        <p class="card-label">
+                            SKILLS
+                        </p>
+
+                        <div class="skill-list" id="skillList">
+                            Add skills to your profile
+                        </div>
+
+                    </article>
+
+
+                    <!-- CONTACT -->
+
+                    <article class="info-card">
+
+                        <div class="card-icon">✉</div>
+
+                        <p class="card-label">
+                            CONTACT
+                        </p>
+
+                        <h3 id="contactText">
+                            Add contact information
+                        </h3>
+
+                        <p class="card-description">
+                            Ways to reach you
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- PROJECT SECTION -->
+
+            <section class="section-block" id="projects">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="eyebrow">
+                            THINGS I'VE WORKED ON
+                        </p>
+
+                        <h2>Featured Projects</h2>
+                    </div>
+
+                    <button
+                        class="button primary"
+                        id="addProjectButton"
+                    >
+                        + Add Project
+                    </button>
+
+                </div>
+
+                <div class="project-grid" id="projectGrid">
+
+                    <div class="empty-project">
+
+                        <span>✧</span>
+
+                        <h3>Your projects will live here.</h3>
+
+                        <p>
+                            Add your first project to get started.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+
+            <footer class="footer">
+
+                <span>
+                    © <span id="year"></span>
+                    <span id="footerName">MyFolio</span>
+                </span>
+
+                <span>
+                    Designed to tell your story.
+                </span>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- EDIT PROFILE POPUP -->
+
+    <div class="modal hidden" id="profileModal">
+
+        <div class="modal-card">
+
+            <div class="modal-heading">
+
+                <div>
+                    <p class="eyebrow">MAKE IT YOURS</p>
+                    <h2>Edit Your Profile</h2>
+                </div>
+
+                <button class="close-button" data-close="profileModal">
+                    ×
+                </button>
+
+            </div>
+
+            <form id="profileForm" class="modal-form">
+
+                <label>
+                    Full Name
+                    <input name="name" required>
+                </label>
+
+                <label>
+                    Headline
+                    <input
+                        name="headline"
+                        placeholder="BSc Computer Science Student"
+                    >
+                </label>
+
+                <label>
+                    About Me
+                    <textarea
+                        name="about"
+                        rows="4"
+                        placeholder="Tell visitors about yourself"
+                    ></textarea>
+                </label>
+
+                <label>
+                    Education
+                    <input
+                        name="education"
+                        placeholder="BSc Computer Science - 1st Semester"
+                    >
+                </label>
+
+                <label>
+                    Skills
+                    <small>Separate skills with commas</small>
+
+                    <input
+                        name="skills"
+                        placeholder="HTML, CSS, JavaScript"
+                    >
+                </label>
+
+                <label>
+                    Contact Information
+                    <input
+                        name="contact"
+                        placeholder="Your email address"
+                    >
+                </label>
+
+                <div class="form-actions">
+
+                    <button
+                        type="button"
+                        class="button outline"
+                        data-close="profileModal"
+                    >
+                        Cancel
+                    </button>
+
+                    <button class="button primary" type="submit">
+                        Save Changes
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ADD / EDIT PROJECT POPUP -->
+
+    <div class="modal hidden" id="projectModal">
+
+        <div class="modal-card">
+
+            <div class="modal-heading">
+
+                <div>
+                    <p class="eyebrow">SHOW WHAT YOU'VE BUILT</p>
+
+                    <h2 id="projectModalTitle">
+                        Add a Project
+                    </h2>
+                </div>
+
+                <button class="close-button" data-close="projectModal">
+                    ×
+                </button>
+
+            </div>
+
+            <form id="projectForm" class="modal-form">
+
+                <input type="hidden" name="projectId">
+
+                <label>
+                    Project Title
+                    <input
+                        name="title"
+                        required
+                        placeholder="My First Website"
+                    >
+                </label>
+
+                <label>
+                    Description
+                    <textarea
+                        name="description"
+                        rows="4"
+                        required
+                        placeholder="Describe your project"
+                    ></textarea>
+                </label>
+
+                <label>
+                    Technologies Used
+                    <input
+                        name="technology"
+                        placeholder="HTML, CSS, JavaScript"
+                    >
+                </label>
+
+                <label>
+                    Project Link
+                    <small>Optional</small>
+
+                    <input
+                        name="link"
+                        type="url"
+                        placeholder="https://example.com"
+                    >
+                </label>
+
+                <div class="form-actions">
+
+                    <button
+                        type="button"
+                        class="button outline"
+                        data-close="projectModal"
+                    >
+                        Cancel
+                    </button>
+
+                    <button class="button primary" type="submit">
+                        Save Project
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- NOTIFICATION -->
+
+    <div class="toast" id="toast"></div>
+
+
+    <!-- JAVASCRIPT FILE -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
